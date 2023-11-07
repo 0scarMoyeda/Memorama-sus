@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 100%;
+    height: 120px;
+    background-color: #2BA84A;
+}
+
+.logoim {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.titulo {
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    font-size: 2.5rem;
+    color: #040F0F;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonesCentrado {
+    display: inline;
+    margin-top: 40px;
+    background-color: #358600;
+    box-shadow: 0 0 10px #248232;
+    padding: 20px;
+    text-align: center;
+}
+
+.boton {
+    margin: 5px;
+    padding: 10px 30px;
+    background-color: #CFFCFF;
+    color: #040F0F;
+    border: 2px solid #CFFCFF;
+}
+
+.centradoCartas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.memorama {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px;
+  }
+  
+.carta {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8rem;
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+.carta img {
+    max-width: 100%; /* Hace que las imagenes se ajusten al ancho del contenedor carta */
+    height: auto; /* Mantiene la proporcion de aspecto de la imagen */
+}
+  
+.carta.volteada {
+    background-color: #2ecc71;
+    transform: rotateY(180deg);
+}
+
+.carta .front, .carta .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.carta .back {
+    transform: rotateY(180deg);
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
