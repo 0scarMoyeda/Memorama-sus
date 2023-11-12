@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Sustentable Menu de juego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Espacio del titulo y logo -->
+    <div id="logo" class="logo">
+        <img src="./logo.jpg" class="logoim" alt="El logo de nuestro proyecto: un circulo de hojas con un perrito pug en el centro">
+        <h1 class="titulo"> Memorama Sustentable</h1>
+    </div>
+
+     <!-- Centrado de los botones -->
+    <div class="centrado">
+        <div class="botonesCentrado">
+            <button id="barajar" class="boton">Barajear</button>
+            <div id="regresar">
+                <button id="Regresar" class="boton" onclick="delay_back()">Regresar</button>
+                <audio class="audio-carta" id="audio-regresar" src="../Audios/Audios2/SeRregresoAlMenuInicio.mp3"></audio>
+            </div>
+            
+            <p id="puntaje" class="puntaje">Puntaje: 50</p>
+        </div>
+    </div>
+
+    <!-- Cartas creacion -->
+    <div class="centradoCartas">
+        <div class="memorama">
+            <div class="carta" data-valor="1">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                  </div>
+                  <div class="back">
+                    <img class="imagen-real" src="../Cards/Imagenes/Derretimiento.jpg" alt="carta de derretimiento">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenDerretimiento.m4a"></audio>
+                  </div>
+            </div>
+            <div class="carta" data-valor="2">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/Basura.jpeg" alt="carta de basura">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenBasura.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="3">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/SepararBasura.jpeg" alt="carta de separar basura">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenSepararLaBasura.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="4">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/Smog.jpeg" alt="carta de Smog">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenSmog.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="1">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/Derretimiento.png" alt="carta de Derretimiento">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaDerretimiento.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="2">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/Basura.png" alt="carta de Basura">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaBasura.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="3">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/SepararBasura.png" alt="carta de Separar Basura">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaSepararLaBas.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="4">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/Smog.png" alt="carta de Smog">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaSmog.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="5">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/Reciclar.jpeg" alt="carta de Reciclar">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenReciclar.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="6">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/Co2.webp" alt="carta de CO2">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenCo2.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="7">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/Calentamiento.jpeg" alt="carta de calentamiento">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenCalentamiento.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="8">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Imagenes/AhorrarAgua.jpeg" alt="carta de ahorrar agua">
+                    <audio class="audio-carta" src="../Audios/AudioImagen/ImagenAhorrarAgua.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="5">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/Reciclar.png" alt="carta de reciclar">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaReciclar.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="6">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/CO2.png" alt="carta de CO2">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaCo2.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="8">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/AhorrarAgua.png" alt="carta de ahorrar agua">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaAhorrarAgua.m4a"></audio>
+                </div>
+            </div>
+            <div class="carta" data-valor="7">
+                <div class="front">
+                    <img src="./logo-transparente.png" alt="Estas en una carta">
+                </div>
+                <div class="back">
+                    <img src="../Cards/Nombres/Calentamiento.png" alt="carta de calentamiento">
+                    <audio class="audio-carta" src="../Audios/AudioCartas/CartaCalentamiento.m4a"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Llamada al script -->
+    <script src="script.js"></script>
+</body>
+</html> 

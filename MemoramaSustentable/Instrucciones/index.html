@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Sustentable Menu de Instrucciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="logo" class="logo">
+        <img src="./logo.jpg" class="logoim" alt="El logo de nuestro proyecto: un circulo de hojas con un perrito pug en el centro">
+        <h1 class="titulo">Memorama Sustentable</h1>
+    </div>
+    <div class="texto">
+        <p class="parrafo" id="miParrafo">
+            <strong class="subtitulo">Como se juega:</strong> <br>
+            Para jugar usamos la tecla tab donde avanzamos una carta al dar clic en la tecla una vez.<br>
+            Si presionamos shift mas tab regresamos a la carta anterior.<br>
+            Las cartas estan acomodadas en forma de cuadrado con unas medidad de 4 por 4 dando un total de 16 
+            cartas en total<br>
+            Finalmente con enter podemos voltear una carta seleccionada.<br> <br>
+            Posdata si empezamos en el boton de barajear recomiendo dar shift y tab ya que asi empezaremos 
+            al final y no tenemos que recorrer todo el recorrido ya que tendremos que dar 6 tabs para llegar a 
+            la primera carta, ya que esto pasa solo si barajeamos con el boton en cambio si se inicia en el 
+            menu principal se inicia en la primer carta entonces no es necesario igual se te dira cuando estes 
+            en una carta.
+        </p>
+    </div>
+    <div class="centrado">
+        <div class="botones">
+            <button class="boton" id="reproducirBtn">Reproducir Texto</button>
+            <div id="regresar">
+                <button type="submit" class="boton" id="botonRegresar" onclick="delay_back()">Regresar</button>
+                <audio class="audio-carta" id="audio-regresar" src="../Audios/Audios2/SeRregresoAlMenuInicio.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
